@@ -40,7 +40,7 @@ namespace AkkaCinema.Actors
                     _supervisor.Tell(e.Message);
                     return Directive.Resume;
                 }
-                
+
                 _supervisor.Tell(e);
                 return Directive.Stop;
             });

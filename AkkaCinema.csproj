@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actors\CommandReceiver.cs" />
+    <Compile Include="Actors\Logger.cs" />
     <Compile Include="Commands.cs" />
     <Compile Include="Db.cs" />
     <Compile Include="Actors\Player.cs" />
@@ -60,6 +62,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

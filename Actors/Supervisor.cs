@@ -30,11 +30,7 @@ namespace AkkaCinema.Actors
         private void PrintStats()
         {
             foreach (var stat in _stats)
-                Console.WriteLine("Title: {0}-[{1}]", stat.Key, stat.Value);
-        }
-        protected override SupervisorStrategy SupervisorStrategy()
-        {
-            return new OneForOneStrategy(e => Directive.Escalate);
+                Console.WriteLine("Title: {0}-[{1}]", stat.Key, stat.Value.ToString("D"));
         }
     }
 }

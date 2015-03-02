@@ -30,11 +30,6 @@ namespace AkkaCinema.Actors
         {
             return new OneForOneStrategy(e =>
             {
-                if (e is RuntimeBinderException)
-                {
-                    _supervisor.Tell(new Commands.UnknownCommand(e));
-                    return Directive.Resume;
-                }
                 if (e is NotSupportedException)
                 {
                     _supervisor.Tell(e.Message);

@@ -33,5 +33,10 @@ namespace AkkaCinema.Actors
                 }
             }
         }
+
+	    protected override SupervisorStrategy SupervisorStrategy()
+	    {
+		    return new OneForOneStrategy(e => Directive.Stop);
+	    }
     }
 }

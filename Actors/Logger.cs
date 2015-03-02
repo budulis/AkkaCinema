@@ -1,6 +1,5 @@
 ﻿using System;
 using Akka.Actor;
-using Microsoft.CSharp.RuntimeBinder;
 
 namespace AkkaCinema.Actors
 {
@@ -65,16 +64,6 @@ namespace AkkaCinema.Actors
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(content);
             Console.ForegroundColor = current;
-        }
-
-        protected override SupervisorStrategy SupervisorStrategy()
-        {
-            return new OneForOneStrategy(e =>
-            {
-                if (e is RuntimeBinderException)
-                    return Directive.Resume;
-                return Directive.Stop;
-            });
         }
     }
 }
